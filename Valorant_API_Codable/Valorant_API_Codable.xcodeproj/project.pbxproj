@@ -12,6 +12,12 @@
 		C2A8892B27B427A200984C76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2A8892927B427A200984C76 /* Main.storyboard */; };
 		C2A8892D27B427A400984C76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2A8892C27B427A400984C76 /* Assets.xcassets */; };
 		C2A8893F27B430D500984C76 /* Agent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A8893E27B430D500984C76 /* Agent.swift */; };
+		C2A8894227B43AA200984C76 /* AgentsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A8894127B43AA200984C76 /* AgentsTableViewCell.swift */; };
+		C2A8894627B43AFE00984C76 /* AgentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A8894527B43AFE00984C76 /* AgentDetailViewController.swift */; };
+		C2A8894827B43B3500984C76 /* AbilitiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A8894727B43B3500984C76 /* AbilitiesTableViewCell.swift */; };
+		C2A8894A27B43B6700984C76 /* AgentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A8894927B43B6700984C76 /* AgentTableViewController.swift */; };
+		C2A8894C27B43BC300984C76 /* NetworkingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A8894B27B43BC300984C76 /* NetworkingController.swift */; };
+		C2A8894E27B43CC600984C76 /* ResultError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A8894D27B43CC600984C76 /* ResultError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		C2A8892C27B427A400984C76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2A8893127B427A400984C76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2A8893E27B430D500984C76 /* Agent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agent.swift; sourceTree = "<group>"; };
+		C2A8894127B43AA200984C76 /* AgentsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentsTableViewCell.swift; sourceTree = "<group>"; };
+		C2A8894527B43AFE00984C76 /* AgentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentDetailViewController.swift; sourceTree = "<group>"; };
+		C2A8894727B43B3500984C76 /* AbilitiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilitiesTableViewCell.swift; sourceTree = "<group>"; };
+		C2A8894927B43B6700984C76 /* AgentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgentTableViewController.swift; sourceTree = "<group>"; };
+		C2A8894B27B43BC300984C76 /* NetworkingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingController.swift; sourceTree = "<group>"; };
+		C2A8894D27B43CC600984C76 /* ResultError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +88,7 @@
 		C2A8893827B427D300984C76 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C2A8894027B43A7200984C76 /* Networking */,
 				C2A8893D27B427FA00984C76 /* Model Controller */,
 				C2A8893C27B427F400984C76 /* View Controller */,
 				C2A8893B27B427EB00984C76 /* Custom Cells */,
@@ -102,6 +115,8 @@
 		C2A8893B27B427EB00984C76 /* Custom Cells */ = {
 			isa = PBXGroup;
 			children = (
+				C2A8894127B43AA200984C76 /* AgentsTableViewCell.swift */,
+				C2A8894727B43B3500984C76 /* AbilitiesTableViewCell.swift */,
 			);
 			path = "Custom Cells";
 			sourceTree = "<group>";
@@ -109,6 +124,8 @@
 		C2A8893C27B427F400984C76 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C2A8894527B43AFE00984C76 /* AgentDetailViewController.swift */,
+				C2A8894927B43B6700984C76 /* AgentTableViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -118,6 +135,15 @@
 			children = (
 			);
 			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		C2A8894027B43A7200984C76 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C2A8894B27B43BC300984C76 /* NetworkingController.swift */,
+				C2A8894D27B43CC600984C76 /* ResultError.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,7 +216,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2A8894827B43B3500984C76 /* AbilitiesTableViewCell.swift in Sources */,
+				C2A8894E27B43CC600984C76 /* ResultError.swift in Sources */,
+				C2A8894C27B43BC300984C76 /* NetworkingController.swift in Sources */,
 				C2A8893F27B430D500984C76 /* Agent.swift in Sources */,
+				C2A8894A27B43B6700984C76 /* AgentTableViewController.swift in Sources */,
+				C2A8894627B43AFE00984C76 /* AgentDetailViewController.swift in Sources */,
+				C2A8894227B43AA200984C76 /* AgentsTableViewCell.swift in Sources */,
 				C2A8892427B427A200984C76 /* AppDelegate.swift in Sources */,
 				C2A8892627B427A200984C76 /* SceneDelegate.swift in Sources */,
 			);

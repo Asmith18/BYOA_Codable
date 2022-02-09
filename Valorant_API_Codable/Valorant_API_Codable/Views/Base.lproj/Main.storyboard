@@ -11,13 +11,13 @@
         <!--Agents-->
         <scene sceneID="P6L-75-hOb">
             <objects>
-                <tableViewController id="htL-sE-WJM" sceneMemberID="viewController">
+                <tableViewController id="htL-sE-WJM" customClass="AgentTableViewController" customModule="Valorant_API_Codable" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="FIv-Rr-6Wc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="agentCell" rowHeight="85" id="SJ0-DP-88J">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="agentCell" rowHeight="85" id="SJ0-DP-88J" customClass="AgentsTableViewCell" customModule="Valorant_API_Codable" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SJ0-DP-88J" id="VAb-kp-Sz6">
@@ -87,10 +87,10 @@
             </objects>
             <point key="canvasLocation" x="405.79710144927537" y="22.767857142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Agent Detail View Controller-->
         <scene sceneID="3yI-gk-Jgl">
             <objects>
-                <viewController id="Dd9-Pf-HkK" sceneMemberID="viewController">
+                <viewController id="Dd9-Pf-HkK" customClass="AgentDetailViewController" customModule="Valorant_API_Codable" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MFL-Te-4lr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -121,7 +121,7 @@
                                 <rect key="frame" x="0.0" y="430" width="414" height="432"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="abilitiesCell" rowHeight="56" id="SAY-Hr-x7y">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="abilitiesCell" rowHeight="56" id="SAY-Hr-x7y" customClass="AbilitiesTableViewCell" customModule="Valorant_API_Codable" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SAY-Hr-x7y" id="Wzn-Er-yAm">
