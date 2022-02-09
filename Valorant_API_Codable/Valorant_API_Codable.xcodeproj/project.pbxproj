@@ -11,6 +11,7 @@
 		C2A8892627B427A200984C76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A8892527B427A200984C76 /* SceneDelegate.swift */; };
 		C2A8892B27B427A200984C76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2A8892927B427A200984C76 /* Main.storyboard */; };
 		C2A8892D27B427A400984C76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2A8892C27B427A400984C76 /* Assets.xcassets */; };
+		C2A8893F27B430D500984C76 /* Agent.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A8893E27B430D500984C76 /* Agent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		C2A8892A27B427A200984C76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C2A8892C27B427A400984C76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2A8893127B427A400984C76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2A8893E27B430D500984C76 /* Agent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Agent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 		C2A8893A27B427E200984C76 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C2A8893E27B430D500984C76 /* Agent.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2A8893F27B430D500984C76 /* Agent.swift in Sources */,
 				C2A8892427B427A200984C76 /* AppDelegate.swift in Sources */,
 				C2A8892627B427A200984C76 /* SceneDelegate.swift in Sources */,
 			);
