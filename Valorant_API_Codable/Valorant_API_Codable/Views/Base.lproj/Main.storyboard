@@ -83,7 +83,7 @@
                                     <outlet property="agentImageView" destination="GJH-Bm-8lp" id="HdO-NU-9VR"/>
                                     <outlet property="agentNameTextLabel" destination="kEh-ca-aN8" id="wSw-Oj-EAN"/>
                                     <outlet property="agentRoleTextLabel" destination="AII-uU-CYx" id="Jsd-Wh-HAk"/>
-                                    <segue destination="Dd9-Pf-HkK" kind="show" id="chS-rc-pHk"/>
+                                    <segue destination="Dd9-Pf-HkK" kind="show" identifier="toAgentVC" id="chS-rc-pHk"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
