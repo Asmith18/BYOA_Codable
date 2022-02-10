@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import UIKit
+import UIKit.UIImage
 
 class NetworkingController {
     
@@ -14,11 +14,17 @@ class NetworkingController {
     
     private static let agentComponent = "/v1/agents"
     
-    static func fetchAgent(with urlString: String, completion: @escaping (Result<AgentData, ResultError>) -> Void) {
+    static func fetchAgent(completion: @escaping (Result<TopLevelDict, ResultError>) -> Void) {
         
         guard let baseURL = URL(string: baseURLString) else { return }
         
-        let finalURL = baseURL.appendingPathComponent(agentComponent)
+        let urlAgentComponent = baseURL.appendingPathComponent(agentComponent)
+        
+        let sovaQuery = URLQueryItem(name: "isPlayableCharacter", value: "true")
+        var urlComponents = URLComponents(url: urlAgentComponent, resolvingAgainstBaseURL: true)
+        urlComponents?.queryItems = [sovaQuery]
+        guard let finalURL = urlComponents?.url else { return }
+        
         
         URLSession.shared.dataTask(with: finalURL) { data, _, error in
             if let error = error {
@@ -30,7 +36,7 @@ class NetworkingController {
                 return}
         
             do {
-                let agent = try JSONDecoder().decode(AgentData.self, from: agentData)
+                let agent = try JSONDecoder().decode(TopLevelDict.self, from: agentData)
                 completion(.success(agent))
             } catch {
                 completion(.failure(.thrownError(error)))
@@ -57,6 +63,6 @@ class NetworkingController {
                 return
             }
             completion(.success(agentImage))
-        }
+        }.resume()
     }
 }

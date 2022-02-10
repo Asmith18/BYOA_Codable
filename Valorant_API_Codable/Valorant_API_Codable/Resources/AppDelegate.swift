@@ -14,6 +14,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+//        NetworkingController.fetchAgent { result in
+//            switch result {
+//            case .success(let agent):
+//                print(agent.data[5].abilities[0].displayIcon)
+//            case .failure(let error):
+//                print(error.errorDescription)
+//            }
+//        }
         return true
     }
 

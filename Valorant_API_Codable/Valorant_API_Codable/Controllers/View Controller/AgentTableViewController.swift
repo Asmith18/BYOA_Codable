@@ -9,37 +9,38 @@ import UIKit
 
 class AgentTableViewController: UITableViewController {
 
+    var data: [AgentData] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        NetworkingController.fetchAgent { result in
+            switch result {
+            case .success(let data):
+                self.data = data.data
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 
     // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return data.count
     }
-
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+       guard let cell = tableView.dequeueReusableCell(withIdentifier: "agentCell", for: indexPath) as? AgentsTableViewCell else { return UITableViewCell() }
+        
+        let agent = data[indexPath.row]
+        cell.updateViews(agent: agent)
+        
+        
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.

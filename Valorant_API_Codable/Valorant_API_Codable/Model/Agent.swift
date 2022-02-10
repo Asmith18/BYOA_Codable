@@ -13,7 +13,7 @@ struct TopLevelDict: Decodable {
 
 struct AgentData: Decodable {
     let displayName: String
-    let displayIcon: String
+    let displayIcon: String?
     let role: AgentRole
     let abilities: [AgentAbilities]
     let description: String
@@ -21,10 +21,10 @@ struct AgentData: Decodable {
 
 struct AgentRole: Decodable {
     let displayName: String
-    let displayIcon: String
+    let displayIcon: String?
 }
 
 struct AgentAbilities: Decodable {
     let displayName: String
-    let displayIcon: String
+    let displayIcon: String?
 }

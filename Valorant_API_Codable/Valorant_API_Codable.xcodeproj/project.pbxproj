@@ -66,10 +66,10 @@
 		C2A8892227B427A200984C76 /* Valorant_API_Codable */ = {
 			isa = PBXGroup;
 			children = (
+				C2A8893727B427C800984C76 /* Resources */,
 				C2A8893A27B427E200984C76 /* Model */,
 				C2A8893927B427DC00984C76 /* Views */,
 				C2A8893827B427D300984C76 /* Controllers */,
-				C2A8893727B427C800984C76 /* Resources */,
 			);
 			path = Valorant_API_Codable;
 			sourceTree = "<group>";
@@ -89,7 +89,6 @@
 			isa = PBXGroup;
 			children = (
 				C2A8894027B43A7200984C76 /* Networking */,
-				C2A8893D27B427FA00984C76 /* Model Controller */,
 				C2A8893C27B427F400984C76 /* View Controller */,
 				C2A8893B27B427EB00984C76 /* Custom Cells */,
 			);
@@ -128,13 +127,6 @@
 				C2A8894927B43B6700984C76 /* AgentTableViewController.swift */,
 			);
 			path = "View Controller";
-			sourceTree = "<group>";
-		};
-		C2A8893D27B427FA00984C76 /* Model Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 		C2A8894027B43A7200984C76 /* Networking */ = {
