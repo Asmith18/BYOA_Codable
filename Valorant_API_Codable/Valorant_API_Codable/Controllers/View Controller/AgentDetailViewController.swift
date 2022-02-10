@@ -23,10 +23,11 @@ class AgentDetailViewController: UIViewController {
         agentAbilitiesTableView.dataSource = self
     }
     
-    var agenAbilities: [AgentAbilities] = []
+    var agentAbilities: [AgentAbilities] = []
     
     var agentData: AgentData? {
         didSet {
+            agentAbilities = agentData!.abilities
             updateViews()
         }
     }
@@ -61,14 +62,15 @@ extension AgentDetailViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return agenAbilities.count
+        return agentAbilities.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "abilitiesCell", for: indexPath) as? AbilitiesTableViewCell else { return UITableViewCell() }
         
-        let abilities = agenAbilities[indexPath.row]
+        let abilities = agentAbilities[indexPath.row]
         cell.updateViews(ability: abilities)
+        
         
         return cell
     }

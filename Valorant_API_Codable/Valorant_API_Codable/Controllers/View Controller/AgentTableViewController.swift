@@ -9,7 +9,6 @@ import UIKit
 
 class AgentTableViewController: UITableViewController {
     
-    var agentAbilities: [AgentAbilities] = []
     
     var data: [AgentData] = []
     
@@ -82,18 +81,8 @@ class AgentTableViewController: UITableViewController {
         if segue.identifier == "toAgentVC" {
             if let destination = segue.destination as? AgentDetailViewController {
                 guard let index = tableView.indexPathForSelectedRow else { return }
-                let agentToSend = data[index.row]
-                NetworkingController.fetchAgent { result in
-                    switch result {
-                    case .success(let agent):
-                        destination.agentData = agent.data
-                        DispatchQueue.main.async {
-                            self.tableView.reloadData()
-                        }
-                    case .failure(let error):
-                        print(error)
-                    }
-                }
+                let agent = data[index.row]
+                destination.agentData = agent
             }
         }
     }

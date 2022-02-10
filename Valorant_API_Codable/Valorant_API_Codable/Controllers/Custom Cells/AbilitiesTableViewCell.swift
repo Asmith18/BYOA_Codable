@@ -13,8 +13,7 @@ class AbilitiesTableViewCell: UITableViewCell {
     @IBOutlet weak var agentAbilityImageView: UIImageView!
     
     func updateViews(ability: AgentAbilities) {
-        
-        agentAbilityNameTextLabel.text = ability.displayName
+        fetchImage(for: ability)
     }
     
     func fetchImage(for ability: AgentAbilities) {
@@ -24,6 +23,7 @@ class AbilitiesTableViewCell: UITableViewCell {
             switch result {
             case .success(let agentIcon):
                 DispatchQueue.main.async {
+                    self.agentAbilityNameTextLabel.text = ability.displayName
                     self.agentAbilityImageView.image = agentIcon
                 }
             case .failure(let error):
