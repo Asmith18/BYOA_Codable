@@ -12,6 +12,7 @@ class AgentDetailViewController: UIViewController {
     @IBOutlet weak var agentNameTextLabel: UILabel!
     @IBOutlet weak var agentIconImageView: UIImageView!
     @IBOutlet weak var agentDescriptionTextView: UITextView!
+    @IBOutlet weak var agentAbilitiesTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

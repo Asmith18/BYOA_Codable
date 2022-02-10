@@ -9,12 +9,8 @@ import UIKit
 
 class AbilitiesTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var agentAbilityTextLabel: UILabel!
-    @IBOutlet weak var agentAbilityIconImageView: UIImageView!
+    @IBOutlet weak var agentAbilityNameTextLabel: UILabel!
+    @IBOutlet weak var agentAbilityImageView: UIImageView!
     
 
-    func updateViews(agent: AgentAbilities) {
-        
-        agentAbilityTextLabel.text = agent.displayName
-    }
 }
